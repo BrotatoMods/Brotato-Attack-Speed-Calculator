@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Brotato Attack Speed Calculator</title>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main>
+		<section class="header">
+			<h1>Brotato Attack Speed Calculator</h1>
+		</section>
+
+		<section class="calc">
+			<div class="field field--type">
+				<fieldset id="type" class="field--type__fieldset">
+					<!-- todo: replace with buttons: since we've hidden the radio button, these no longer have a tab index -->
+					<div class="field__inner field__inner--type">
+						<label class="field__label field__label--type field__label--ranged">
+							<input type="radio" value="ranged" name="type" class="field__input field__input--radio" data-type="ranged" checked="checked">
+							<div class="field__text field__text--type field__text--ranged">Ranged</div>
+						</label>
+					</div>
+
+					<div class="field__inner field__inner--type">
+						<label class="field__label field__label--type field__label--melee">
+							<input type="radio" value="melee" name="type" class="field__input field__input--radio" data-type="melee">
+							<div class="field__text field__text--type field__text--melee">Melee</div>
+						</label>
+					</div>
+
+					<div class="field__inner field__inner--clear">
+						<input type="button" value="X" class="field__input field__input--clear" data-clear>
+					</div>
+				</fieldset>
+			</div>
+
+			<div class="field">
+				<label class="field__label">
+					<div class="field__text">Cooldown</div>
+					<input type="number" class="field__input cooldown" data-cooldown placeholder="eg. 40" step="5">
+				</label>
+			</div>
+
+			<div class="field">
+				<label class="field__label">
+					<div class="field__text">Recoil Reduction</div>
+					<input type="number" class="field__input recoilr" data-recoilr value="0.1" step="0.05">
+					<div class="field__helper">
+						(almost always 0.1)
+					</div>
+				</label>
+			</div>
+
+			<div class="field">
+				<label class="field__label">
+					<div class="field__text">Max Range</div>
+					<input type="number" class="field__input maxrange" data-maxrange placeholder="eg. 175" step="25">
+					<div class="field__helper">
+						(only needed for melee)
+					</div>
+				</label>
+			</div>
+
+			<div class="field field--submit">
+				<label class="field__label">
+					<div class="field__text">Submit</div>
+					<input type="button" value="Calculate" class="field__input field__input--submit submit" data-submit>
+				</label>
+			</div>
+
+			<div class="field field--result">
+				<label class="field__label">
+					<div class="field__text">Result (sec)</div>
+					<input type="text" disabled class="field__input field__input--disabled field__input-result" data-result>
+				</label>
+			</div>
+
+			<div class="demos">
+				<div class="demos__heading">
+					<h2>Vanilla Demos</h2>
+				</div>
+
+				<div class="demos__cols">
+					<div class="demos__col">
+						<div class="field">
+							<label class="field__label">
+								<div class="field__text">Ranged</div>
+								<select class="field__input" data-demo="ranged">
+									<option value="none">...</option>
+								</select>
+							</label>
+						</div>
+					</div>
+
+					<div class="demos__col">
+						<div class="field">
+							<label class="field__label">
+								<div class="field__text">Melee</div>
+								<select class="field__input" data-demo="melee">
+									<option value="none">...</option>
+								</select>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="tips">
+				<div>keyboard shortcuts:</div>
+				<div>A/LEFT = ranged | D/RIGHT = melee</div>
+				<div>UP/DOWN = change in small steps</div>
+				<!-- <div>ENTER = Calculate</div> -->
+			</div>
+			<div class="credit">
+				<div>made by Darkly77</div>
+				<div><a href="#">BrotatoMods</a></div>
+			</div>
+		</footer>
+	</main>
+
+	<div id="scripts">
+		<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+		<script src="data/melee.js"  type="module"></script>
+		<script src="data/ranged.js" type="module"></script>
+		<script src="script.js"      type="module"></script>
+	</div>
+</body>
+</html>
