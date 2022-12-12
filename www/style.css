@@ -19,8 +19,8 @@ h1 {
 	font-size: 1.4rem;
 }
 
-small {
-	font-size: 0.8rem;
+a {
+	color: white;
 }
 
 
@@ -53,8 +53,6 @@ section.calc {
 	margin-bottom: 10px;
 }
 
-/* .field__inner {} */
-
 .field__label {
 	align-items: center;
 	display: flex;
@@ -73,7 +71,7 @@ section.calc {
 	border: 1px solid grey;
 	color: white;
 	padding: 10px;
-	width: 100px;
+	width: 115px;
 	font-size: 1rem;
 }
 
@@ -82,13 +80,13 @@ section.calc {
 	background: #1e1e1e;
 }
 
+.field__input--invalid {
+	border-color: red;
+}
+
 .field__helper {
 	margin-left: 5px;
 	font-size: 0.65rem;
-}
-
-.field__input--invalid {
-	border-color: red;
 }
 
 
@@ -215,8 +213,9 @@ section.calc {
 }
 
 .demos__heading {
-	text-align: center;
+	font-weight: bold;
 	margin-bottom: 10px;
+	text-align: center;
 }
 
 .demos__cols {
@@ -253,11 +252,17 @@ footer {
 
 .tips {
 	font-size: 0.5rem;
-	/* text-transform: uppercase; */
 }
 
 .credit {
 	font-size: 0.45rem;
-	text-transform: uppercase;
 	margin-top: 20px;
+}
+
+
+/* Misc */
+/* ===========================================================================*/
+
+.text-upper {
+	text-transform: uppercase;
 }

@@ -28,9 +28,9 @@ $( document ).ready( () =>
 				$recoilr:  $( '[data-recoilr]' ),
 				$maxrange: $( '[data-maxrange]' ),
 				$result:   $( '[data-result]' ),
-				$submit:   $( '[data-submit]' ),
 				$clear:    $( '[data-clear]' ),
 				$demos:    $( '[data-demo]' ),
+				// $submit:   $( '[data-submit]' ),
 			};
 
 			this.setupDemoOptions();
@@ -57,7 +57,7 @@ $( document ).ready( () =>
 
 		setupFormHandler()
 		{
-			this.els.$submit.on(   'click', () => this.calculate() );
+			// this.els.$submit.on(   'click', () => this.calculate() );
 
 			this.els.$cooldown.on( 'change', () => this.calculate() );
 			this.els.$recoilr.on(  'change', () => this.calculate() );
@@ -297,13 +297,13 @@ $( document ).ready( () =>
 			{
 				switch( ev.code )
 				{
-					case 'ArrowLeft':
+					// case 'ArrowLeft':
 					case 'KeyA':
 						this.setType( 'ranged' );
 						ev.preventDefault();
 						break;
 
-					case 'ArrowRight':
+					// case 'ArrowRight':
 					case 'KeyD':
 						this.setType( 'melee' );
 						ev.preventDefault();
