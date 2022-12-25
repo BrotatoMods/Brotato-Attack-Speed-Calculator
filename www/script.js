@@ -30,7 +30,7 @@ $( document ).ready( () =>
 				$result:   $( '[data-result]' ),
 				$clear:    $( '[data-clear]' ),
 				$demos:    $( '[data-demo]' ),
-				// $submit:   $( '[data-submit]' ),
+				$submit:   $( '[data-submit]' ),
 			};
 
 			this.setupDemoOptions();
@@ -57,7 +57,7 @@ $( document ).ready( () =>
 
 		setupFormHandler()
 		{
-			// this.els.$submit.on(   'click', () => this.calculate() );
+			this.els.$submit.on( 'click', () => this.calculate() );
 
 			this.els.$cooldown.on( 'change', () => this.calculate() );
 			this.els.$recoilr.on(  'change', () => this.calculate() );
