@@ -31,8 +31,8 @@ main {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	min-height: 100vh;
 	justify-content: center;
+	min-height: 100vh;
 }
 
 section.header {
@@ -70,14 +70,14 @@ section.calc {
 	border-radius: 3px;
 	border: 1px solid grey;
 	color: white;
+	font-size: 1rem;
 	padding: 10px;
 	width: 115px;
-	font-size: 1rem;
 }
 
 .field__input--disabled {
-	border: 1px dotted #666;
 	background: #1e1e1e;
+	border: 1px dotted #666;
 }
 
 .field__input--invalid {
@@ -85,8 +85,8 @@ section.calc {
 }
 
 .field__helper {
-	margin-left: 5px;
 	font-size: 0.65rem;
+	margin-left: 5px;
 }
 
 
@@ -94,9 +94,9 @@ section.calc {
 /* ===========================================================================*/
 
 .field--type {
-	margin-bottom: 20px;
 	display: flex;
 	justify-content: center;
+	margin-bottom: 20px;
 }
 
 .field--type__fieldset {
@@ -179,11 +179,11 @@ section.calc {
 /* ===========================================================================*/
 
 .field__input--clear {
+	background: #642b2b;
+	border: 1px solid #642b2b;
 	margin-left: 0px;
 	padding: 12px;
 	width: 50px;
-	background: #642b2b;
-	border: 1px solid #642b2b;
 }
 
 .field__input--clear:hover {
@@ -197,8 +197,8 @@ section.calc {
 
 .field--result {
 	border-top: 1px dashed #666;
-	padding-top: 20px;
 	margin-top: 20px;
+	padding-top: 20px;
 }
 
 
@@ -207,9 +207,9 @@ section.calc {
 
 .demos {
 	border-top: 1px dashed #666;
-	padding-top: 20px;
-	margin-top: 20px;
 	font-size: 0.8rem;
+	margin-top: 20px;
+	padding-top: 20px;
 }
 
 .demos__heading {
@@ -224,8 +224,8 @@ section.calc {
 }
 
 .demos__col {
-	width: 50%;
 	text-align: center;
+	width: 50%;
 }
 
 .demos .field__input {
