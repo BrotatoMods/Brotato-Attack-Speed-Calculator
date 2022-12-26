@@ -297,22 +297,24 @@ $( document ).ready( () =>
 			{
 				switch( ev.code )
 				{
+					// Arrow keys are disabled because they're used to edit numbers!
 					// case 'ArrowLeft':
+					// case 'ArrowRight':
+
 					case 'KeyA':
 						this.setType( 'ranged' );
 						ev.preventDefault();
 						break;
 
-					// case 'ArrowRight':
 					case 'KeyD':
 						this.setType( 'melee' );
 						ev.preventDefault();
 						break;
 
-					// !! Not needed as calculations happen on any change
-					// case 'Enter':
-					// case 'NumpadEnter':
-					// 	this.calculate();
+					// Not really needed as calculations happen on any change
+					case 'Enter':
+					case 'NumpadEnter':
+						this.calculate();
 				}
 			});
 		}
