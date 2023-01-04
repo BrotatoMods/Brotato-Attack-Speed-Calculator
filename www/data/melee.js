@@ -429,7 +429,7 @@ export default {
 	},
 	"scissors_1": {
 		"name": "Scissors 1",
-		"cooldown": 45,
+		"cooldown": 27,
 		"maxrange": 150,
 		"recoilr": 0.1,
 		"type": "melee"
