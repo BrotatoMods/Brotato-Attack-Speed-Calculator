@@ -293,9 +293,15 @@ $( document ).ready( () =>
 		initKeyboardShortcuts()
 		{
 			// Note: arrow keys aren't detected on `keypress`
-			$( document ).on( 'keydown', ( ev ) =>
+			$( document ).on( 'keydown', ( e ) =>
 			{
-				switch( ev.code )
+				// Ignore stuff like "Ctrl+A"
+				if ( e.ctrlKey || e.altKey || e.shiftKey )
+				{
+					return;
+				}
+
+				switch( e.code )
 				{
 					// Arrow keys are disabled because they're used to edit numbers!
 					// case 'ArrowLeft':
@@ -303,15 +309,14 @@ $( document ).ready( () =>
 
 					case 'KeyA':
 						this.setType( 'ranged' );
-						ev.preventDefault();
+						e.preventDefault();
 						break;
 
 					case 'KeyD':
 						this.setType( 'melee' );
-						ev.preventDefault();
+						e.preventDefault();
 						break;
 
-					// Not really needed as calculations happen on any change
 					case 'Enter':
 					case 'NumpadEnter':
 						this.calculate();
